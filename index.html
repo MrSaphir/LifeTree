@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Arbre de la Vie — Communauté d'entraide Discord</title>
+<meta name="description" content="L'Arbre de la Vie est une communauté Discord d'entraide où l'on peut parler, écouter, échanger et avancer à son rythme, entourés de personnes bienveillantes.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M20 4 C20 4 10 12 10 20 C10 27 14 31 20 33 C26 31 30 27 30 20 C30 12 20 4 20 4 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M20 33 L20 37 M20 37 L15 40 M20 37 L25 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span>L'Arbre de la Vie</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="#presentation">Présentation</a>
+      <a href="#symbole">Le symbole</a>
+      <a href="#valeurs">Nos racines</a>
+      <a href="#securite">Sécurité</a>
+      <a href="#rejoindre" class="nav-cta">Rejoindre</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
+    <a href="#presentation">Présentation</a>
+    <a href="#symbole">Le symbole</a>
+    <a href="#communaute">Communauté</a>
+    <a href="#valeurs">Nos racines</a>
+    <a href="#securite">Sécurité</a>
+    <a href="#rejoindre" class="nav-cta">🌱 Rejoindre la communauté</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="fireflies" id="fireflies"></div>
+    <svg class="hero-tree" viewBox="0 0 900 1000" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="trunkGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3f6b52"/>
+          <stop offset="100%" stop-color="#1b3b2a"/>
+        </linearGradient>
+        <radialGradient id="glow" cx="50%" cy="35%" r="60%">
+          <stop offset="0%" stop-color="#c9a567" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#c9a567" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="450" cy="330" r="340" fill="url(#glow)"/>
+      <g class="tree-draw" fill="none" stroke="url(#trunkGradient)" stroke-width="3" stroke-linecap="round">
+        <path class="branch b1" d="M450 620 C450 520 450 430 450 360"/>
+        <path class="branch b2" d="M450 470 C420 400 360 360 300 320"/>
+        <path class="branch b3" d="M450 470 C480 400 540 360 600 320"/>
+        <path class="branch b4" d="M300 320 C260 290 230 250 210 200"/>
+        <path class="branch b5" d="M300 320 C280 270 290 220 320 180"/>
+        <path class="branch b6" d="M600 320 C640 290 670 250 690 200"/>
+        <path class="branch b7" d="M600 320 C620 270 610 220 580 180"/>
+        <path class="branch b8" d="M450 360 C440 300 460 250 450 190"/>
+        <path class="root r1" d="M450 620 C430 660 400 690 350 710" stroke-opacity="0.55"/>
+        <path class="root r2" d="M450 620 C470 660 500 690 550 710" stroke-opacity="0.55"/>
+        <path class="root r3" d="M450 620 C450 670 450 700 450 740" stroke-opacity="0.55"/>
+        <path class="root r4" d="M350 710 C310 740 270 760 220 775" stroke-opacity="0.35"/>
+        <path class="root r5" d="M550 710 C590 740 630 760 680 775" stroke-opacity="0.35"/>
+      </g>
+      <g class="leaves" fill="#e8ddb8" fill-opacity="0.85">
+        <circle class="leaf" cx="210" cy="200" r="4"/>
+        <circle class="leaf" cx="320" cy="180" r="3.5"/>
+        <circle class="leaf" cx="690" cy="200" r="4"/>
+        <circle class="leaf" cx="580" cy="180" r="3.5"/>
+        <circle class="leaf" cx="450" cy="190" r="4.5"/>
+        <circle class="leaf" cx="260" cy="240" r="3"/>
+        <circle class="leaf" cx="640" cy="240" r="3"/>
+        <circle class="leaf" cx="380" cy="150" r="3"/>
+        <circle class="leaf" cx="520" cy="150" r="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-content reveal">
+    <p class="hero-eyebrow">Une communauté Discord</p>
+    <h1>L'Arbre de la Vie</h1>
+    <p class="hero-tagline">Un endroit où l'on peut simplement être soi-même.</p>
+    <p class="hero-text">
+      Une communauté d'entraide où chacun peut venir parler, écouter, échanger
+      et avancer à son rythme.
+    </p>
+    <div class="hero-actions">
+      <a href="https://discord.gg/53nNUCFMxq" class="btn btn-primary" id="hero-join" target="_blank" rel="noopener">
+        <span aria-hidden="true">🌱</span> Rejoindre la communauté
+      </a>
+      <a href="#presentation" class="btn btn-ghost">Découvrir L'Arbre</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span></span>
+  </div>
+</section>
+
+<!-- ===================== PRESENTATION ===================== -->
+<section class="section" id="presentation">
+  <div class="container narrow">
+    <p class="section-eyebrow reveal">Bienvenue</p>
+    <h2 class="reveal">Ici, chacun peut avoir sa place.</h2>
+    <p class="section-lead reveal">
+      Que vous traversiez une période difficile ou que vous ayez simplement besoin
+      d'un endroit calme pour discuter, l'Arbre de la Vie est pensé comme un espace
+      communautaire, tenu par des bénévoles, où l'on avance ensemble.
+    </p>
+
+    <div class="card-grid">
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true">💬</span>
+        <h3>Parler</h3>
+        <p>Pouvoir mettre des mots sur ce que l'on ressent et échanger avec d'autres personnes.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true">👂</span>
+        <h3>Être écouté</h3>
+        <p>Trouver des personnes capables d'écouter sans jugement de valeur.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true">🤝</span>
+        <h3>S'entraider</h3>
+        <p>Partager son expérience et apporter du soutien lorsque cela est possible.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card-icon" aria-hidden="true">🌱</span>
+        <h3>Avancer</h3>
+        <p>Parce qu'aller mieux n'est pas toujours immédiat et que chaque petit pas compte.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SYMBOLE DE L'ARBRE ===================== -->
+<section class="section section-dark" id="symbole">
+  <div class="container">
+    <p class="section-eyebrow reveal">Le sens du nom</p>
+    <h2 class="reveal">Pourquoi « L'Arbre de la Vie » ?</h2>
+    <p class="section-lead reveal">
+      Un arbre grandit grâce à ses racines, mais il grandit aussi grâce à ce qui
+      l'entoure. C'est cette idée qui porte toute la communauté.
+    </p>
+
+    <div class="tree-diagram">
+      <div class="tree-diagram-visual" aria-hidden="true">
+        <svg viewBox="0 0 300 520">
+          <path class="td-path" d="M150 60 L150 220" stroke="#c9a567" stroke-width="2" fill="none"/>
+          <path class="td-path" d="M150 220 C150 260 150 300 150 340" stroke="#e8ddb8" stroke-width="3" fill="none"/>
+          <path class="td-path" d="M150 260 C110 240 80 220 50 190" stroke="#e8ddb8" stroke-width="2" fill="none"/>
+          <path class="td-path" d="M150 260 C190 240 220 220 250 190" stroke="#e8ddb8" stroke-width="2" fill="none"/>
+          <path class="td-path" d="M150 340 C130 380 110 410 80 440" stroke="#6b8f77" stroke-width="2" fill="none"/>
+          <path class="td-path" d="M150 340 C170 380 190 410 220 440" stroke="#6b8f77" stroke-width="2" fill="none"/>
+          <path class="td-path" d="M150 340 C150 380 150 410 150 450" stroke="#6b8f77" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+
+      <ol class="tree-list">
+        <li class="reveal">
+          <span class="tree-emoji" aria-hidden="true">🌱</span>
+          <div>
+            <h3>Les racines</h3>
+            <p>Les expériences, les histoires et les personnes qui nous ont construits.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tree-emoji" aria-hidden="true">🌿</span>
+          <div>
+            <h3>Le tronc</h3>
+            <p>Ce que nous sommes aujourd'hui.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tree-emoji" aria-hidden="true">🍃</span>
+          <div>
+            <h3>Les branches</h3>
+            <p>Les chemins différents que chacun peut prendre.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tree-emoji" aria-hidden="true">🌳</span>
+          <div>
+            <h3>Les feuilles</h3>
+            <p>Les personnes qui composent la communauté.</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tree-emoji" aria-hidden="true">🌱</span>
+          <div>
+            <h3>Les nouvelles pousses</h3>
+            <p>Les possibilités de recommencer, évoluer et avancer.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALEURS ===================== -->
+<section class="section" id="valeurs">
+  <div class="container narrow">
+    <p class="section-eyebrow reveal">Ce qui nous porte</p>
+    <h2 class="reveal">Nos racines</h2>
+    <p class="section-lead reveal">Les valeurs qui tiennent la communauté debout, comme des racines tiennent un arbre.</p>
+
+    <div class="value-list">
+      <div class="value-row reveal">
+        <h3>Respect</h3>
+        <p>Tout le monde doit pouvoir participer sans subir de harcèlement, discrimination, sexisme, racisme ou discours haineux.</p>
+      </div>
+      <div class="value-row reveal">
+        <h3>Bienveillance</h3>
+        <p>Les difficultés des autres ne doivent pas devenir une raison de les juger ou de les comparer.</p>
+      </div>
+      <div class="value-row reveal">
+        <h3>Écoute</h3>
+        <p>On écoute avant de vouloir imposer une solution.</p>
+      </div>
+      <div class="value-row reveal">
+        <h3>Consentement</h3>
+        <p>L'aide doit respecter les limites de chacun. Les membres ne doivent pas être poussés à parler en privé ou à recevoir de l'aide qu'ils ne souhaitent pas.</p>
+      </div>
+      <div class="value-row reveal">
+        <h3>Solidarité</h3>
+        <p>L'objectif est de s'entraider et de construire une communauté, pas d'isoler les personnes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PAS UN SERVICE MEDICAL ===================== -->
+<section class="section section-panel">
+  <div class="container narrow">
+    <div class="panel reveal">
+      <h2>Nous ne sommes pas des professionnels.</h2>
+      <p>
+        L'Arbre de la Vie est animé par des personnes bénévoles et non par des
+        professionnels de santé. Les discussions et conseils proposés par la
+        communauté ne remplacent donc pas un suivi professionnel lorsque celui-ci
+        est nécessaire.
+      </p>
+      <p class="panel-note">Mais cela ne signifie pas que vous devez rester seul lorsque vous traversez quelque chose de difficile.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECURITE ===================== -->
+<section class="section section-dark" id="securite">
+  <div class="container narrow">
+    <p class="section-eyebrow reveal">Un cadre clair</p>
+    <h2 class="reveal">Pour que l'arbre reste un endroit sûr.</h2>
+
+    <ul class="rules-list reveal">
+      <li>Respecter les autres.</li>
+      <li>Aucun harcèlement ou discours de haine.</li>
+      <li>Pas de comparaison ou jugement des membres.</li>
+      <li>Pas de drague : ce n'est pas un serveur de rencontre.</li>
+      <li>Pas de publicité ou spam sans autorisation.</li>
+      <li>Respecter la vie privée et les limites des autres.</li>
+      <li>Ne pas contacter quelqu'un en privé pour parler de problèmes sans son accord.</li>
+      <li>Pas de contenu sexuel, violent ou explicitement perturbant.</li>
+      <li>Signaler au staff toute situation problématique.</li>
+    </ul>
+
+    <div class="rules-actions reveal">
+      <a href="#" id="rules-link" class="btn btn-outline">Consulter le règlement complet</a>
+    </div>
+
+    <p class="fine-print reveal">
+      Une courte présentation est demandée lors de l'arrivée afin que chacun
+      puisse faire ses premiers pas dans la communauté.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== COMMUNAUTE VIVANTE ===================== -->
+<section class="section" id="communaute">
+  <div class="container narrow">
+    <p class="section-eyebrow reveal">La vie de l'arbre</p>
+    <h2 class="reveal">Une communauté construite par ses membres.</h2>
+
+    <div class="orbit-wrap reveal" aria-hidden="true">
+      <div class="orbit-center">🌳</div>
+      <div class="orbit-item oi1">Écouter</div>
+      <div class="orbit-item oi2">Échanger</div>
+      <div class="orbit-item oi3">Partager</div>
+      <div class="orbit-item oi4">Soutenir</div>
+      <div class="orbit-item oi5">Grandir</div>
+    </div>
+    <ul class="sr-only">
+      <li>Écouter</li><li>Échanger</li><li>Partager</li><li>Soutenir</li><li>Grandir</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="section section-cta" id="rejoindre">
+  <div class="cta-bg" aria-hidden="true"></div>
+  <div class="container narrow">
+    <h2 class="reveal">Et si vous veniez simplement prendre place sous l'arbre ?</h2>
+    <p class="reveal">
+      Que vous veniez pour parler, écouter, aider ou simplement découvrir la
+      communauté, vous êtes libre de faire vos premiers pas à votre rythme.
+    </p>
+    <a href="https://discord.gg/53nNUCFMxq" class="btn btn-primary btn-large reveal" id="cta-join" target="_blank" rel="noopener">
+      🌳 Rejoindre L'Arbre de la Vie
+    </a>
+    <p class="cta-footnote reveal">Votre histoire mérite d'être entendue.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark-small" aria-hidden="true">🌳</span>
+        <span>L'Arbre de la Vie</span>
+        <p>Une communauté d'entraide, de respect et d'écoute.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Liens du pied de page">
+        <a href="#top">Accueil</a>
+        <a href="#presentation">Présentation</a>
+        <a href="#valeurs">Nos valeurs</a>
+        <a href="#" id="footer-rules-link">Règlement</a>
+        <a href="https://discord.gg/53nNUCFMxq" target="_blank" rel="noopener">Discord</a>
+      </nav>
+    </div>
+    <p class="footer-disclaimer">
+      L'Arbre de la Vie est une communauté bénévole et ne remplace pas un accompagnement professionnel.
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
