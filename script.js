@@ -25,11 +25,7 @@ const CONFIG = {
       el.setAttribute("href", CONFIG.discordUrl);
     });
 
-    const rulesLinks = [
-      document.getElementById("rules-link"),
-      document.getElementById("footer-rules-link")
-    ];
-    rulesLinks.forEach((el) => {
+    [document.getElementById("rules-link"), document.getElementById("footer-rules-link")].forEach((el) => {
       if (el) el.setAttribute("href", CONFIG.rulesUrl);
     });
 
@@ -41,14 +37,14 @@ const CONFIG = {
   }
 
   // -------------------------------------------------------
-  // Header : effet au scroll
+  // Header : fond dépoli au scroll
   // -------------------------------------------------------
   function initHeaderScroll() {
     const header = document.getElementById("site-header");
     if (!header) return;
 
     function onScroll() {
-      header.classList.toggle("scrolled", window.scrollY > 30);
+      header.classList.toggle("scrolled", window.scrollY > 24);
     }
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -73,25 +69,18 @@ const CONFIG = {
       toggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
     });
 
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
   }
 
   // -------------------------------------------------------
-  // Apparition des éléments au scroll (IntersectionObserver)
+  // Apparition douce au scroll
   // -------------------------------------------------------
   function initScrollReveal() {
     const revealEls = document.querySelectorAll(".reveal");
-    const specialEls = document.querySelectorAll(".tree-diagram, .orbit-wrap");
 
     if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       revealEls.forEach((el) => el.classList.add("in-view"));
-      specialEls.forEach((el) => el.classList.add("in-view"));
       return;
     }
 
@@ -108,62 +97,20 @@ const CONFIG = {
     );
 
     revealEls.forEach((el) => observer.observe(el));
-    specialEls.forEach((el) => observer.observe(el));
   }
 
   // -------------------------------------------------------
-  // Parallaxe très légère sur l'arbre du hero
+  // Si l'image lifetree.webp est absente, on efface le cadre
+  // proprement plutôt que d'afficher une icône d'image cassée
   // -------------------------------------------------------
-  function initParallax() {
-    if (prefersReducedMotion) return;
+  function initHeroImageFallback() {
+    const img = document.querySelector(".hero-image");
+    const frame = document.querySelector(".hero-image-frame");
+    if (!img || !frame) return;
 
-    const tree = document.querySelector(".hero-tree");
-    if (!tree) return;
-
-    let ticking = false;
-
-    function update() {
-      const y = window.scrollY;
-      const offset = Math.min(y * 0.08, 60);
-      tree.style.transform = `translate(-50%, ${offset}px)`;
-      ticking = false;
-    }
-
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (!ticking) {
-          requestAnimationFrame(update);
-          ticking = true;
-        }
-      },
-      { passive: true }
-    );
-  }
-
-  // -------------------------------------------------------
-  // Lucioles discrètes dans le hero
-  // -------------------------------------------------------
-  function initFireflies() {
-    const container = document.getElementById("fireflies");
-    if (!container || prefersReducedMotion) return;
-
-    const count = window.innerWidth < 700 ? 8 : 16;
-
-    for (let i = 0; i < count; i++) {
-      const dot = document.createElement("span");
-      const left = Math.random() * 100;
-      const bottom = Math.random() * 55;
-      const duration = 6 + Math.random() * 8;
-      const delay = Math.random() * 8;
-
-      dot.style.left = left + "%";
-      dot.style.bottom = bottom + "%";
-      dot.style.animationDuration = duration + "s";
-      dot.style.animationDelay = delay + "s";
-
-      container.appendChild(dot);
-    }
+    img.addEventListener("error", () => {
+      frame.style.display = "none";
+    });
   }
 
   // -------------------------------------------------------
@@ -174,7 +121,6 @@ const CONFIG = {
     initHeaderScroll();
     initMobileMenu();
     initScrollReveal();
-    initParallax();
-    initFireflies();
+    initHeroImageFallback();
   });
 })();

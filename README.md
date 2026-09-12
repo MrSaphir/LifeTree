@@ -11,8 +11,16 @@ gratuitement sur **GitHub Pages**.
 ├── index.html
 ├── style.css
 ├── script.js
-└── README.md
+├── README.md
+└── assets/
+    └── lifetree.webp
 ```
+
+⚠️ Le site référence l'image `assets/lifetree.png` dans le hero (identité
+visuelle de la communauté). Placez votre fichier image dans un dossier
+`assets/` à la racine du projet, à côté des autres fichiers, en conservant
+exactement ce nom. Si l'image est absente, le cadre qui devait l'accueillir
+disparaît simplement — le reste du site continue de fonctionner normalement.
 
 ## 🚀 Télécharger / cloner le projet
 
